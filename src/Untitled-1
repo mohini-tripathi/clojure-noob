@@ -1,0 +1,18 @@
+var tmp;
+var iter3 = (node) => {
+  if (node === null) {
+    return tmp;
+  }
+  tmp.push(node.value);
+  iter3(node.next);
+  return tmp;
+}
+
+var iter3 = (node, mapper) => {
+  if (node === null) {
+    return tmp;
+  }
+  tmp.push(mapper(node.value));
+  iter3(node.next);
+  return tmp;
+}
